@@ -3,7 +3,7 @@ import CartIcon from '../Cart/CartIcon'
 import clasees from './HeaderCartButton.module.css'
 const HeaderCartButton = props => {
   return (
-   <button className={clasees.button}>
+   <button className={clasees.button} onClick={props.onClick}>
     <span className={clasees.icon}><CartIcon /></span>
     <span>Your Cart</span>
     <span className={clasees.badge}>3</span>
