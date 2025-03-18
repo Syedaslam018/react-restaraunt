@@ -18,11 +18,27 @@ const CartProvider = props => {
       }
       })
     }
-    const removeItemFromCartHandler = id => {}
+    const removeItemFromCartHandler = id => {
+      setCartItems((prevCartItems) =>
+        prevCartItems
+          .map((item) =>
+            item.id === id ? { ...item, amount: item.amount - 1 } : item
+          )
+          .filter((item) => item.amount > 0) // Remove if amount is 0
+      );
+    }
+    const addSameItemToCartHandler = id => {
+      setCartItems((prevCartItems) =>
+        prevCartItems.map((item) =>
+          item.id === id ? { ...item, amount: item.amount + 1 } : item
+        )
+      );
+    }
     const cartContext = {
         items:cartItems,
         totalAmount:0,
         addItem:addItemToCartHandler,
+        addOneItem:addSameItemToCartHandler,
         removeItem:removeItemFromCartHandler
     }
   return (

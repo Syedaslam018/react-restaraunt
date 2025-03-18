@@ -1,5 +1,5 @@
 .meal {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     margin: 1rem;
     padding-bottom: 1rem;
@@ -10,19 +10,30 @@
     margin: 0 0 0.25rem 0;
   }
   
-  .description {
-    font-style: italic;
-  }
-  
-  .price {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #ad5502;
-    font-size: 1.25rem;
-  }
+  .container{
+    display: inline;
+  } 
+  .add{
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #100f0e;
+    font-size: large;
+    border: 1px solid #8a2b06;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  } 
+  .sub {
+    cursor: pointer;
+    background-color: rgb(162, 251, 218);
+    color: #282725;
+    font-size: large;
+    border: 1px solid #8a2b06;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  } 
   .amount {
-    margin-top: 0.25rem;
-    font-weight: bold;
-    color: #191717;
-    font-size: 1.25rem;
+    padding: 0.25rem 1rem;
+    margin-left: 1rem;
   }
